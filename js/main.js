@@ -157,7 +157,7 @@ var typed = new Typed('.typeWriter', {
 let bot = new RiveScript();
 
 const brains = [
-    '../chatbot/brain.rive'
+    './chatbot/brain.rive'
  // another brain
  ];
  bot.loadFile(brains).then(botReady).catch(botNotReady);
