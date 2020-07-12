@@ -259,7 +259,7 @@ body {
     box-shadow: -11px -1px 19px -1px rgba(0,0,0,0.59);
     z-index: 200;
     display: none;
-    background-color: crimson;
+    background-color:rgba(165, 34, 34, 1);
 }
 
    
@@ -321,4 +321,11 @@ div.chatclose{
     border-radius: 0;
     border-top-right-radius: 10px;
 }
+div.chaticon .fa-qrcode{
+    color: white;
+}
+div.chaticon button{
+    background-color:rgba(165, 34, 34, 1);
+}
+
 

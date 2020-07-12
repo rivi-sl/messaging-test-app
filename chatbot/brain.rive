@@ -1,19 +1,54 @@
 ! version = 2.0
 
+//bot Substitutions
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+! sub name's  = name is
+
 + (hello|hi)
 - hello, what is your name?
 
-+ who are you
-- I am RIVI bot
++ (who|what) are you
+- I am RIVI bot <i class="fas fa-robot fa-lg"></i>
 
-+ my name is *
-- nice to meet you <star>
-- nice meeting you <star>
++ [*] my name is *
+- <set name=<star>>Nice to meet you, <b><get name></b>.
+- <set name=<star>>Great name you've got there, <b><get name></b>.
+
++ (what is my name|who am i|do you know my name)
+* <get name> == undefined => Tell me your name please
+- You're <get name>, right?
+
++ [*] nice to meet you [*]
+- <i class="fas fa-laugh-beam fa-lg"></i>
 
 + thank you
 - you are welcome
 - welcome
 - no problem
+
++ [(what|who)] [(is|are)] rivi [(is|are)]
+- RIVI is a newly formed organization on software and technology. <i><a href="#r-section1">more info</a></i>
+
++ [*] (members|team) [*]
+-<i><a href="#r-section4">see here</a></i> <i class="fas fa-smile-beam fa-lg"></i>
+
++[*] (products|softwares) [*]
+-you can see all the products <i><a href="#r-section3">here</a></i>
 
 + *
 - Sorry did not get what you said

@@ -171,11 +171,23 @@ form.addEventListener('submit', (e) => {
  input_box.value = '';
 });
 function botReply(message){
- message_container.innerHTML += `<span class="bot">${message}</span>`;
+ message_container.innerHTML += 
+ `<div class="container">
+ <div class="row">
+ <!--<span><i class="fas fa-angle-double-right"></i></span>-->
+ <span class="bot">${message}</span>
+ </div>
+ </div>`;
  location.href = '#edge';
 }
+
 function selfReply(message){
- message_container.innerHTML += `<span class="self">${message}</span>`;
+ message_container.innerHTML += 
+ `<div class="container">
+ <div class="row">
+<span class="self">${message}</span>
+</div>
+</div>`;
  location.href = '#edge';
  
  bot.reply("local-user", message).then(function(reply) {
